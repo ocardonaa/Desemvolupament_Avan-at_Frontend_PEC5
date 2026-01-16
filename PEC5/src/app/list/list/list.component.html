@@ -1,1 +1,18 @@
-<p>list works!</p>
+<h1>safasdffas</h1>
+<cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+    <div *cdkVirtualFor="let student of students" class="students-div">
+        <div class="single-student">
+            <p>ID_Alumno: {{ student.id }}</p>
+            <p>Nombre: {{ student.name }}</p>
+            <p>Apellidos: {{ student.surnames }}</p>
+            <p>Sexo: {{ student.sex }}</p>
+            @if(student.grade >= 5) {
+            <p>Nota Final: aprobado</p>
+            }
+            @else {
+            <p>Nota Final: suspendido</p>
+            }
+            <p>Faltas Asistencia: {{ student.absences }}</p>
+        </div>
+    </div>
+</cdk-virtual-scroll-viewport>
