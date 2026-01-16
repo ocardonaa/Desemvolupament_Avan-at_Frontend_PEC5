@@ -1,1 +1,21 @@
-<p>home works!</p>
+<div class="students-div">
+    @for(student of students; track student.id) {
+    <div class="single-student">
+        <p>ID_Alumno: {{ student.id }}</p>
+        <p>Nombre: {{ student.name }}</p>
+        <p>Apellidos: {{ student.surnames }}</p>
+        <p>Sexo: {{ student.sex }}</p>
+        @if(student.grade >= 5) {
+            <p>Nota Final: aprobado</p>
+        }
+        @else {
+            <p>Nota Final: suspendido</p>
+        }
+        <p>Faltas Asistencia: {{ student.absences }}</p>
+    </div>
+    }
+
+    @empty {
+        No hay alumnos
+    }
+</div>
