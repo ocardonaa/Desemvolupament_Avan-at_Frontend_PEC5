@@ -1,1 +1,4 @@
-<p>gender works!</p>
+<div *ngIf="isBrowser" class="back-color">
+    <canvas baseChart [data]="chartData" [options]="chartOptions">
+    </canvas>
+</div>

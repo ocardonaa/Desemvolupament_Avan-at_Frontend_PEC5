@@ -3,9 +3,15 @@
         <app-resume-data></app-resume-data>
     </div>
     <div class="block">
-        second elem, gender data
+        <app-gender></app-gender>
     </div>
+    @defer(on viewport) {
     <div class="block">
-        thrid elem, general data and defer
+        <app-general-results></app-general-results>
     </div>
+    }
+    @placeholder {
+    <p>Loading...</p>
+    }
+
 </cdk-virtual-scroll-viewport>
